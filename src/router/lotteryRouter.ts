@@ -7,7 +7,7 @@ const lotteryRouter = Router();
 
 lotteryRouter.get("/lottery", gamecontroller.getMyGames);
 lotteryRouter.post("/lottery", validateSchema(lotterySchema) ,gamecontroller.createFavoriteGame);
-lotteryRouter.delete("/lottery", gamecontroller.deleteGameByID);
-lotteryRouter.put("/lottery", gamecontroller.editGameByID);
+lotteryRouter.delete("/lottery/:id", gamecontroller.deleteGameByID);
+lotteryRouter.put("/lottery/:id", gamecontroller.editGameByID);
 
 export default lotteryRouter
